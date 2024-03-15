@@ -95,4 +95,11 @@ class AuthController extends Controller
         ]);
 
     }
+
+    /// get user logged in 
+    public function me(){
+        return response()->json([
+            'user' => Auth::user()
+        ]);
+    }
 }
