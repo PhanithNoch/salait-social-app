@@ -94,6 +94,12 @@ class PostController extends Controller
                     'message'=>'Post deleted successfully'
                 ]);
             }
+            else{
+                return response()->json([
+                    'message'=>'You are not authorized to delete this post'
+                ]);
+            
+            }
         }
         else{
             return response()->json([
